@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ms-productos
+  r2dbc:
+    url: r2dbc:postgresql://ep-odd-grass-a5zs4hqj-pooler.us-east-2.aws.neon.tech/ms-producto?sslmode=require&channel_binding=require
+    username: NeonDB_owner
+    password: npg_z3LUOmRcrI5G
+    pool:
+      initial-size: 5
+      max-size: 20
+
+server:
+  port: 8081
