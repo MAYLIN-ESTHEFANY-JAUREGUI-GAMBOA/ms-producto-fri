@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-productos-service-port2
+spec:
+  selector:
+    app: ms-productos-port2
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9081
+    nodePort: 30082
+  type: NodePort

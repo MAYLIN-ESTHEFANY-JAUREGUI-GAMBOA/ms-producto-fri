@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-productos-deployment
+  labels:
+    app: ms-productos
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ms-productos
+  template:
+    metadata:
+      labels:
+        app: ms-productos
+    spec:
+      containers:
+      - name: ms-productos
+        image: maylinjg/ms-producto-fri:latest
+        ports:
+        - containerPort: 8081
+        envFrom:
+        - configMapRef:
+            name: ms-productos-config
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

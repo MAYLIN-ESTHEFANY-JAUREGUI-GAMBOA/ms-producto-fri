@@ -19,4 +19,9 @@ INSERT INTO productos (name, price, stock, active) values
 ('Laptop', 2500.00, 10, true),
 ('Mouse', 50.00, 40, true);
 
+INSERT INTO pedidos (product_id, quantity, total, status) values
+(1, 2, 5000.00, 'PENDING'),
+(2, 5, 250.00, 'COMPLETED');
+
 select * from productos;
+select * from pedidos;

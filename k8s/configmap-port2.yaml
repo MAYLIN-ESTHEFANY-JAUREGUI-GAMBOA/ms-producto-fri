@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ms-productos-config-port2
+data:
+  server.port: "9081"
+  spring.application.name: "ms-productos"
